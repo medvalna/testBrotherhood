@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice 1</title>
+  </head>
+  <body>
+    <div id="root">
+      <div class="modal">
+        <h1>Стать партнером проекта</h1>
+        <div class="upperPart">
+          <div class="inputs">
+            <input placeholder="название организации" />
+            <input placeholder="phone" />
+            <input placeholder="email" />
+          </div>
+          <div class="logoInput">
+            <label for="fileInput" class="custom-file-upload">
+              Выберите файл
+            </label>
+            <input id="fileInput" type="file" />
+            <div id="preview">
+              <img src="../assets/images/logo.png" />
+            </div>
+          </div>
+        </div>
+        <input placeholder="направление" />
+        <input placeholder="site" />
+        <input placeholder="vk" />
+        <input placeholder="ok" />
+        <input placeholder="facebook" />
+        <input placeholder="instagram" />
+        <input placeholder="youtube" />
+        <input placeholder="руководитель" />
+        <div class="buttons">
+          <button>Стать партнером проекта</button>
+          <button onClick="handleOpenModal()" class="decline">Отменить</button>
+        </div>
+      </div>
+      <button onClick="handleOpenModal()" class="start">Open Modal</button>
+    </div>
+    <script type="text/javascript" src="./app.js"></script>
+  </body>
+</html>
