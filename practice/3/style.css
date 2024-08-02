@@ -1,0 +1,82 @@
+#root {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
+}
+
+html,
+body {
+  height: 100%;
+}
+:root {
+  font-family: PT Sans;
+  --pink: rgb(255, 134, 134);
+  --lightPink: #ffc8c8;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+h1 {
+  color: var(--pink);
+}
+table {
+  margin: 20px;
+  border-collapse: collapse;
+}
+table,
+th,
+td {
+  border: 1px solid var(--pink);
+}
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  min-width: 100px;
+}
+th {
+  background-color: var(--lightPink);
+  cursor: pointer;
+  position: relative;
+}
+th.sorted-asc::after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("./assets/icons/arrowUp.svg") no-repeat center center;
+  background-size: contain;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+th.sorted-desc::after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("./assets/icons/arrowDown.svg") no-repeat center center;
+  background-size: contain;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.search {
+  border: var(--pink);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 16px;
+  outline: 2px solid var(--lightPink);
+  outline-offset: 4px;
+}
+.search:focus {
+  outline-color: var(--pink);
+  outline-width: 2px;
+}

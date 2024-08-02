@@ -1,0 +1,48 @@
+#root {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+:root {
+  font-family: PT Sans;
+  --pink: rgb(255, 134, 134);
+  --lightPink: #ffc8c8;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: var(--pink);
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+table {
+  margin: 20px;
+  border-collapse: collapse;
+}
+table,
+th,
+td {
+  border: 1px solid var(--pink);
+}
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  text-overflow: ellipsis;
+}
+th {
+  background-color: var(--lightPink);
+}
