@@ -11,128 +11,130 @@
       <button onClick="handleOpenModal()" class="modal__open-button">
         Open Modal
       </button>
+      <div class="overlay">
+        <div class="modal">
+          <form id="form">
+            <h1>Стать партнером проекта</h1>
+            <div class="modal__upper-part">
+              <div class="modal__inputs">
+                <div class="modal__input-wrapper">
+                  <input
+                    placeholder="Название организации"
+                    id="orgInput"
+                    required
+                  />
+                  <div class="required-indicator">
+                    ✱ <span>Название организации</span>
+                  </div>
+                </div>
+                <div class="modal__input-wrapper">
+                  <input
+                    placeholder="12345678901"
+                    id="phInput"
+                    type="tel"
+                    pattern="\d{11}"
+                    required
+                  />
+                  <div class="required-indicator">✱ <span>Телефон</span></div>
+                </div>
+                <div class="modal__input-wrapper">
+                  <input
+                    placeholder="Email"
+                    id="emailInput"
+                    type="email"
+                    required
+                  />
+                  <div class="required-indicator">
+                    ✱
+                    <span>E-mail</span>
+                  </div>
+                </div>
+              </div>
+              <div class="modal__logo-input">
+                <div>
+                  <img
+                    id="imgCross"
+                    src="./assets/icons/cross.svg"
+                    width="36"
+                    height="36"
+                    class="logo__input-img"
+                    onclick="handleDeleteIcon()"
+                  />
+                  <label
+                    for="fileInput"
+                    class="modal__file-upload"
+                    id="fileLabel"
+                  >
+                    <img src="./assets/icons/file.svg" width="30" height="30" />
+                    Выберите файл
+                  </label>
 
-      <div class="modal">
-        <div class="overlay"></div>
-        <form id="form">
-          <h1>Стать партнером проекта</h1>
-          <div class="modal__upper-part">
-            <div class="modal__inputs">
-              <div class="modal__input-wrapper">
-                <input
-                  placeholder="Название организации"
-                  id="orgInput"
-                  required
-                />
-                <div class="required-indicator">
-                  ✱ <span>Название организации</span>
-                </div>
-              </div>
-              <div class="modal__input-wrapper">
-                <input
-                  placeholder="12345678901"
-                  id="phInput"
-                  type="tel"
-                  pattern="\d{11}"
-                  required
-                />
-                <div class="required-indicator">✱ <span>Телефон</span></div>
-              </div>
-              <div class="modal__input-wrapper">
-                <input
-                  placeholder="Email"
-                  id="emailInput"
-                  type="email"
-                  required
-                />
-                <div class="required-indicator">
-                  ✱
-                  <span>E-mail</span>
+                  <input id="fileInput" type="file" required name="logo" />
+                  <div id="preview">
+                    <img src="./assets/images/logo.png" />
+                  </div>
+                  <div class="required-indicator">
+                    ✱ <span>Логотип (jpeg, png)</span>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="modal__logo-input">
-              <div>
-                <img
-                  id="imgCross"
-                  src="./assets/icons/cross.svg"
-                  width="36"
-                  height="36"
-                  class="logo__input-img"
-                  onclick="handleDeleteIcon()"
-                />
-                <label
-                  for="fileInput"
-                  class="modal__file-upload"
-                  id="fileLabel"
-                >
-                  <img src="./assets/icons/file.svg" width="30" height="30" />
-                  Выберите файл
-                </label>
+            <div class="modal__down-part">
+              <div class="modal__input-wrapper">
+                <select id="dirSelect" required>
+                  <option value="" disabled selected>Направление</option>
+                  <option value="ecology">Экология</option>
+                  <option value="it">IT</option>
+                  <option value="physics">Физика</option>
+                </select>
 
-                <input id="fileInput" type="file" required name="logo" />
-                <div id="preview">
-                  <img src="./assets/images/logo.png" />
-                </div>
+                <div class="required-indicator">✱ <span>Направление</span></div>
+              </div>
+              <div class="modal__input-wrapper">
+                <input placeholder="Сайт" id="siteInput" />
+                <img src="./assets/icons/global.svg" />
+              </div>
+              <div class="modal__input-wrapper">
+                <input placeholder="Вк" id="vkInput" />
+                <img src="./assets/icons/vk.svg" />
+              </div>
+              <div class="modal__input-wrapper">
+                <input placeholder="Одноклассники" id="okInput" />
+                <img src="./assets/icons/ok.svg" />
+              </div>
+              <div class="modal__input-wrapper">
+                <input placeholder="Facebook" id="fbInput" />
+                <img src="./assets/icons/fb.svg" />
+              </div>
+              <div class="modal__input-wrapper">
+                <input placeholder="Instagram" id="igInput" />
+                <img src="./assets/icons/inst.svg" a />
+              </div>
+              <div class="modal__input-wrapper">
+                <input placeholder="Youtube" id="ytInput" />
+                <img src="./assets/icons/youtube.svg" />
+              </div>
+              <div class="modal__input-wrapper">
+                <input placeholder="Руководитель" id="empInput" required />
                 <div class="required-indicator">
-                  ✱ <span>Логотип (jpeg, png)</span>
+                  ✱ <span>Руководитель</span>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="modal__down-part">
-            <div class="modal__input-wrapper">
-              <select id="dirSelect" required>
-                <option value="" disabled selected>Направление</option>
-                <option value="ecology">Экология</option>
-                <option value="it">IT</option>
-                <option value="physics">Физика</option>
-              </select>
-
-              <div class="required-indicator">✱ <span>Направление</span></div>
+            <div class="modal__buttons">
+              <button type="submit" class="modal__submit-button">
+                Стать партнером проекта
+              </button>
+              <button
+                type="button"
+                class="modal__cancel-button"
+                onClick="handleOpenModal()"
+              >
+                Отменить
+              </button>
             </div>
-            <div class="modal__input-wrapper">
-              <input placeholder="Сайт" id="siteInput" />
-              <img src="./assets/icons/global.svg" />
-            </div>
-            <div class="modal__input-wrapper">
-              <input placeholder="Вк" id="vkInput" />
-              <img src="./assets/icons/vk.svg" />
-            </div>
-            <div class="modal__input-wrapper">
-              <input placeholder="Одноклассники" id="okInput" />
-              <img src="./assets/icons/ok.svg" />
-            </div>
-            <div class="modal__input-wrapper">
-              <input placeholder="Facebook" id="fbInput" />
-              <img src="./assets/icons/fb.svg" />
-            </div>
-            <div class="modal__input-wrapper">
-              <input placeholder="Instagram" id="igInput" />
-              <img src="./assets/icons/inst.svg" a />
-            </div>
-            <div class="modal__input-wrapper">
-              <input placeholder="Youtube" id="ytInput" />
-              <img src="./assets/icons/youtube.svg" />
-            </div>
-            <div class="modal__input-wrapper">
-              <input placeholder="Руководитель" id="empInput" required />
-              <div class="required-indicator">✱ <span>Руководитель</span></div>
-            </div>
-          </div>
-          <div class="modal__buttons">
-            <button type="submit" class="modal__submit-button">
-              Стать партнером проекта
-            </button>
-            <button
-              type="button"
-              class="modal__cancel-button"
-              onClick="handleOpenModal()"
-            >
-              Отменить
-            </button>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
     <script type="text/javascript" src="./app.js"></script>

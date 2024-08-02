@@ -1,8 +1,10 @@
 function handleOpenModal() {
   const modal = document.querySelector(".modal");
   const button = document.querySelector(".modal__open-button");
+  const overlay = document.querySelector(".overlay");
   modal.classList.toggle("open");
   button.classList.toggle("hid");
+  overlay.classList.toggle("open");
 }
 
 document
