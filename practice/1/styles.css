@@ -337,6 +337,10 @@ input[type="file"]:invalid ~ .required-indicator {
   select {
     width: 100%;
   }
+  .modal {
+    top: 0;
+    border-radius: 0;
+  }
   .modal.open {
     padding: 12px 20px;
     width: 100%;
