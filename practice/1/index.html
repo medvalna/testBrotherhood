@@ -11,8 +11,10 @@
       <button onClick="handleOpenModal()" class="modal__open-button">
         Open Modal
       </button>
-      <form id="form">
-        <div class="modal">
+
+      <div class="modal">
+        <div class="overlay"></div>
+        <form id="form">
           <h1>Стать партнером проекта</h1>
           <div class="modal__upper-part">
             <div class="modal__inputs">
@@ -22,7 +24,9 @@
                   id="orgInput"
                   required
                 />
-                <span class="required-indicator">* Название организации</span>
+                <div class="required-indicator">
+                  ✱ <span>Название организации</span>
+                </div>
               </div>
               <div class="modal__input-wrapper">
                 <input
@@ -32,7 +36,7 @@
                   pattern="\d{11}"
                   required
                 />
-                <span class="required-indicator">* Телефон</span>
+                <div class="required-indicator">✱ <span>Телефон</span></div>
               </div>
               <div class="modal__input-wrapper">
                 <input
@@ -41,14 +45,17 @@
                   type="email"
                   required
                 />
-                <span class="required-indicator">* E-mail</span>
+                <div class="required-indicator">
+                  ✱
+                  <span>E-mail</span>
+                </div>
               </div>
             </div>
             <div class="modal__logo-input">
               <div>
                 <img
                   id="imgCross"
-                  src="../assets/icons/cross.svg"
+                  src="./assets/icons/cross.svg"
                   width="36"
                   height="36"
                   class="logo__input-img"
@@ -59,56 +66,59 @@
                   class="modal__file-upload"
                   id="fileLabel"
                 >
-                  <img src="../assets/icons/file.svg" width="30" height="30" />
+                  <img src="./assets/icons/file.svg" width="30" height="30" />
                   Выберите файл
                 </label>
 
                 <input id="fileInput" type="file" required name="logo" />
                 <div id="preview">
-                  <img src="../assets/images/logo.png" />
+                  <img src="./assets/images/logo.png" />
                 </div>
-                <span class="required-indicator">✱ Логотип (jpeg, png)</span>
+                <div class="required-indicator">
+                  ✱ <span>Логотип (jpeg, png)</span>
+                </div>
               </div>
             </div>
           </div>
+          <div class="modal__down-part">
+            <div class="modal__input-wrapper">
+              <select id="dirSelect" required>
+                <option value="" disabled selected>Направление</option>
+                <option value="ecology">Экология</option>
+                <option value="it">IT</option>
+                <option value="physics">Физика</option>
+              </select>
 
-          <div class="modal__input-wrapper">
-            <select id="dirSelect" required>
-              <option value="" disabled selected>Направление</option>
-              <option value="ecology">Экология</option>
-              <option value="it">IT</option>
-              <option value="physics">Физика</option>
-            </select>
-
-            <span class="required-indicator"> * Направление </span>
-          </div>
-          <div class="modal__input-wrapper">
-            <input placeholder="Сайт" id="siteInput" />
-            <img src="../assets/icons/global.svg" />
-          </div>
-          <div class="modal__input-wrapper">
-            <input placeholder="Вк" id="vkInput" />
-            <img src="../assets/icons/vk.svg" />
-          </div>
-          <div class="modal__input-wrapper">
-            <input placeholder="Одноклассники" id="okInput" />
-            <img src="../assets/icons/ok.svg" />
-          </div>
-          <div class="modal__input-wrapper">
-            <input placeholder="Facebook" id="fbInput" />
-            <img src="../assets/icons/fb.svg" />
-          </div>
-          <div class="modal__input-wrapper">
-            <input placeholder="Instagram" id="igInput" />
-            <img src="../assets/icons/inst.svg" a />
-          </div>
-          <div class="modal__input-wrapper">
-            <input placeholder="Youtube" id="ytInput" />
-            <img src="../assets/icons/youtube.svg" />
-          </div>
-          <div class="modal__input-wrapper">
-            <input placeholder="Руководитель" id="empInput" required />
-            <span class="required-indicator"> * Руководитель </span>
+              <div class="required-indicator">✱ <span>Направление</span></div>
+            </div>
+            <div class="modal__input-wrapper">
+              <input placeholder="Сайт" id="siteInput" />
+              <img src="./assets/icons/global.svg" />
+            </div>
+            <div class="modal__input-wrapper">
+              <input placeholder="Вк" id="vkInput" />
+              <img src="./assets/icons/vk.svg" />
+            </div>
+            <div class="modal__input-wrapper">
+              <input placeholder="Одноклассники" id="okInput" />
+              <img src="./assets/icons/ok.svg" />
+            </div>
+            <div class="modal__input-wrapper">
+              <input placeholder="Facebook" id="fbInput" />
+              <img src="./assets/icons/fb.svg" />
+            </div>
+            <div class="modal__input-wrapper">
+              <input placeholder="Instagram" id="igInput" />
+              <img src="./assets/icons/inst.svg" a />
+            </div>
+            <div class="modal__input-wrapper">
+              <input placeholder="Youtube" id="ytInput" />
+              <img src="./assets/icons/youtube.svg" />
+            </div>
+            <div class="modal__input-wrapper">
+              <input placeholder="Руководитель" id="empInput" required />
+              <div class="required-indicator">✱ <span>Руководитель</span></div>
+            </div>
           </div>
           <div class="modal__buttons">
             <button type="submit" class="modal__submit-button">
@@ -122,8 +132,8 @@
               Отменить
             </button>
           </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
     <script type="text/javascript" src="./app.js"></script>
   </body>

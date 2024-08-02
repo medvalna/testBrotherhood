@@ -16,11 +16,11 @@ document
     const imgContainer = document.createElement("div");
     const img = document.createElement("img");
     img.src = URL.createObjectURL(file);
-    img.style.height = "100%";
-    img.style.width = "100%";
+    img.style.height = "200px";
+    img.style.width = "200px";
     img.style.display = "block";
     imgContainer.appendChild(img);
-
+    fileLabel.classList.remove("modal__file-upload");
     preview.innerHTML = "";
     fileLabel.classList.toggle("imglogo__input-img");
     preview.appendChild(imgContainer);
@@ -32,13 +32,14 @@ function handleDeleteIcon() {
   preview.innerHTML = "";
   const imgContainer = document.createElement("div");
   const img = document.createElement("img");
-  img.src = "../assets/images/logo.png";
-  img.style.height = "100%";
-  img.style.width = "100%";
+  img.src = "./assets/images/logo.png";
+  img.style.height = "200px";
+  img.style.width = "200px";
   img.style.display = "block";
   imgContainer.appendChild(img);
   preview.appendChild(imgContainer);
-  fileLabel.classList.toggle("imgCross");
+  fileLabel.classList.remove("imglogo__input-img");
+  fileLabel.classList.toggle("modal__file-upload");
 }
 
 document.getElementById("form").addEventListener("submit", function (event) {
