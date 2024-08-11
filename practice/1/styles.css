@@ -129,6 +129,7 @@ button:hover {
 }
 
 .modal__buttons {
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
   gap: 0px;
@@ -224,6 +225,8 @@ input[type="file"] {
   border-radius: 4px;
   width: 100%;
   overflow: hidden;
+  padding: 8px 16px;
+  height: 56px;
 }
 .input :placeholder-shown {
   color: #6a6e72;
@@ -235,12 +238,18 @@ input[type="file"] {
 .modal__input-wrapper input {
   border: none;
   outline: none;
-  padding: 22px 16px 16px;
+  padding: 0;
   width: 100%;
   box-sizing: border-box;
   font-size: 16px;
   color: #6a6e72;
   line-height: 24px;
+}
+.modal__input-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
 }
 
 .modal__input-wrapper img {
@@ -251,9 +260,9 @@ input[type="file"] {
 }
 
 .modal__input-wrapper .required-indicator {
-  position: absolute;
+  /* position: absolute;
   top: 8px;
-  left: 16px;
+  left: 16px; */
   color: red;
   font-size: 12px;
   /* display: none; */
@@ -297,14 +306,13 @@ input[type="file"]:invalid ~ .required-indicator {
   align-items: center;
   border: 1px solid #ccc;
   border-radius: 4px;
-  padding-right: 19px;
 }
 
 .modal__input-wrapper select {
   border: none;
   outline: none;
   /* padding: 16px 10px; */
-  padding: 22px 16px 16px;
+  padding: 0;
   width: 100%;
   /* margin: 0 16px 0 0; */
   margin: 0;
@@ -375,7 +383,8 @@ input[type="file"]:invalid ~ .required-indicator {
   .modal__input-wrapper {
     align-items: center;
     /* padding: 7px; */
-    padding: 14px 10px 5px;
+    /* padding: 14px 10px 5px;
+    padding: 8px 16px; */
     display: flex;
     width: 100%;
     height: 100%;
@@ -392,14 +401,14 @@ input[type="file"]:invalid ~ .required-indicator {
     height: 100%;
   }
 
-  .modal__input-wrapper input {
+  /* .modal__input-wrapper input {
     padding: 20px 10px 12px;
     font-size: 14px;
   }
   .modal__input-wrapper select {
     font-size: 14px;
     padding: 12px 10px 12px;
-  }
+  } */
   button {
     font-size: 12px;
     padding: 0.4rem;

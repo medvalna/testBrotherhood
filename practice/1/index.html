@@ -18,35 +18,41 @@
             <div class="modal__upper-part">
               <div class="modal__inputs">
                 <div class="modal__input-wrapper">
-                  <input
-                    placeholder="Название организации"
-                    id="orgInput"
-                    required
-                  />
-                  <div class="required-indicator">
-                    ✱ <span>Название организации</span>
+                  <div class="modal__input-text-wrapper">
+                    <div class="required-indicator">
+                      ✱ <span>Название организации</span>
+                    </div>
+                    <input
+                      placeholder="Название организации"
+                      id="orgInput"
+                      required
+                    />
                   </div>
                 </div>
                 <div class="modal__input-wrapper">
-                  <input
-                    placeholder="12345678901"
-                    id="phInput"
-                    type="tel"
-                    pattern="\d{11}"
-                    required
-                  />
-                  <div class="required-indicator">✱ <span>Телефон</span></div>
+                  <div class="modal__input-text-wrapper">
+                    <div class="required-indicator">✱ <span>Телефон</span></div>
+                    <input
+                      placeholder="12345678901"
+                      id="phInput"
+                      type="tel"
+                      pattern="\d{11}"
+                      required
+                    />
+                  </div>
                 </div>
                 <div class="modal__input-wrapper">
-                  <input
-                    placeholder="Email"
-                    id="emailInput"
-                    type="email"
-                    required
-                  />
-                  <div class="required-indicator">
-                    ✱
-                    <span>E-mail</span>
+                  <div class="modal__input-text-wrapper">
+                    <div class="required-indicator">
+                      ✱
+                      <span>E-mail</span>
+                    </div>
+                    <input
+                      placeholder="Email"
+                      id="emailInput"
+                      type="email"
+                      required
+                    />
                   </div>
                 </div>
               </div>
@@ -81,14 +87,17 @@
             </div>
             <div class="modal__down-part">
               <div class="modal__input-wrapper">
-                <select id="dirSelect" required>
-                  <option value="" disabled selected>Направление</option>
-                  <option value="ecology">Экология</option>
-                  <option value="it">IT</option>
-                  <option value="physics">Физика</option>
-                </select>
-
-                <div class="required-indicator">✱ <span>Направление</span></div>
+                <div class="modal__input-text-wrapper">
+                  <div class="required-indicator">
+                    ✱ <span>Направление</span>
+                  </div>
+                  <select id="dirSelect" required>
+                    <option value="" disabled selected>Направление</option>
+                    <option value="ecology">Экология</option>
+                    <option value="it">IT</option>
+                    <option value="physics">Физика</option>
+                  </select>
+                </div>
               </div>
               <div class="modal__input-wrapper">
                 <input placeholder="Сайт" id="siteInput" />
@@ -115,9 +124,11 @@
                 <img src="./assets/icons/youtube.svg" />
               </div>
               <div class="modal__input-wrapper">
-                <input placeholder="Руководитель" id="empInput" required />
-                <div class="required-indicator">
-                  <span>Руководитель</span>
+                <div class="modal__input-text-wrapper">
+                  <div class="required-indicator">
+                    <span>Руководитель</span>
+                  </div>
+                  <input placeholder="Руководитель" id="empInput" required />
                 </div>
               </div>
             </div>
