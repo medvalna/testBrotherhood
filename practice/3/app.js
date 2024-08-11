@@ -1,6 +1,7 @@
 const table = document.querySelector(".postsTable");
 const searchBox = document.querySelector(".search");
 let posts = [];
+let filteredPosts = [];
 let sortDirection = "asc";
 let sortColumn = "id";
 
@@ -11,7 +12,8 @@ async function fetchAndDisplayPosts() {
       throw new Error("Network response was not ok");
     }
     posts = await response.json();
-    renderTable(posts);
+    filteredPosts = posts;
+    renderTable(filteredPosts);
   } catch (error) {
     console.error("Error fetching data:", error);
   }
@@ -33,7 +35,7 @@ function renderTable(data) {
 }
 
 function sortTable(column) {
-  const sortedPosts = [...posts].sort((a, b) => {
+  const sortedPosts = [...filteredPosts].sort((a, b) => {
     if (a[column] < b[column]) return sortDirection === "asc" ? -1 : 1;
     if (a[column] > b[column]) return sortDirection === "asc" ? 1 : -1;
     return 0;
@@ -48,13 +50,15 @@ function sortTable(column) {
 }
 
 function filterTable(query) {
-  const filteredPosts = posts.filter(
+  filteredPosts = posts.filter(
     (post) =>
       post.userId.toString().includes(query) ||
       post.id.toString().includes(query) ||
       post.title.toLowerCase().includes(query.toLowerCase()) ||
       post.body.toLowerCase().includes(query.toLowerCase())
   );
+  sortDirection = "asc";
+  sortColumn = "id";
   renderTable(filteredPosts);
 }
 
