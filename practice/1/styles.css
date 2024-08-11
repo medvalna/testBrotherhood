@@ -274,10 +274,6 @@ input[type="file"] {
   display: block;
 }
 
-/* .modal__input-wrapper input:valid ~ .required-indicator {
-  display: none;
-} */
-
 .modal__logo-input {
   position: relative;
   height: fit-content;
@@ -289,13 +285,8 @@ input[type="file"] {
   left: 50px;
   color: red;
   font-size: 12px;
-  /* display: none; */
   display: block;
 }
-
-/* input[type="file"]:valid ~ .required-indicator {
-  display: none;
-} */
 
 input[type="file"]:invalid ~ .required-indicator {
   display: block;
@@ -311,10 +302,8 @@ input[type="file"]:invalid ~ .required-indicator {
 .modal__input-wrapper select {
   border: none;
   outline: none;
-  /* padding: 16px 10px; */
   padding: 0;
   width: 100%;
-  /* margin: 0 16px 0 0; */
   margin: 0;
   box-sizing: border-box;
   font-size: 16px;
@@ -337,7 +326,7 @@ input[type="file"]:invalid ~ .required-indicator {
   gap: 32px;
   width: 100%;
 }
-/* Для iPhone SE и других устройств с узкими экранами */
+
 @media (max-width: 754px) {
   form {
     gap: 3px;
@@ -382,9 +371,6 @@ input[type="file"]:invalid ~ .required-indicator {
   }
   .modal__input-wrapper {
     align-items: center;
-    /* padding: 7px; */
-    /* padding: 14px 10px 5px;
-    padding: 8px 16px; */
     display: flex;
     width: 100%;
     height: 100%;
@@ -401,14 +387,6 @@ input[type="file"]:invalid ~ .required-indicator {
     height: 100%;
   }
 
-  /* .modal__input-wrapper input {
-    padding: 20px 10px 12px;
-    font-size: 14px;
-  }
-  .modal__input-wrapper select {
-    font-size: 14px;
-    padding: 12px 10px 12px;
-  } */
   button {
     font-size: 12px;
     padding: 0.4rem;
